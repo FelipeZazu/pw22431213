@@ -1,0 +1,88 @@
+img[alt]{
+    border: 7px solid blue;
+}
+
+img[src="img/planetamorado.png"] {
+    width: 400px;
+}
+
+img[src^="img/"]{
+    width: 150px;
+}
+
+img[src$="png"]{
+    width: 250px;
+}
+
+img[src*="mg/"]{
+    width: 300px;
+}
+
+/*Equivalente a: 
+.resaltado
+.ingles
+.archivo
+*/
+
+article[class~="resaltado"]{
+    border: 1px dashed blue;
+}
+
+article[class~="ingles"]{
+    border: 1px dashed red;
+}
+
+article[class~="archivo"]{
+    border: 1px dashed green;
+}
+
+
+article[class|="ingles"]{
+    text-align: center;
+}
+
+div > p{
+    color: lime;
+}
+
+div p{
+    color: crimson;
+}
+
+h2 + p{
+    color: gray;
+}
+
+h2 ~ p{
+    color: goldenrod;
+}
+
+#resumen,#experimento,#pruebas,#resultado,#conclusiones{
+    color: blueviolet;
+}
+
+section:not(#referencias){
+    color: blue;
+}
+
+li:nth-child(odd){ /*impar*/ 
+    color: green;
+}
+
+li:nth-child(even){ /*par*/ 
+    color: aquamarine;
+}
+
+li:nth-child(5){ /*quinto elemento*/ 
+    color: purple;
+}
+
+
+li:nth-last-child(2){ /*quinto elemento*/ 
+    color: royalblue;
+}
+
+p::first-line{
+    color: yellowgreen;
+    font-weight: bold;
+}
